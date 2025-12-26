@@ -917,3 +917,28 @@ function testIntrusion() {
         }
     }, 30);
 }
+
+const radiusInput = document.getElementById('customRadius');
+const errorDisplay = document.getElementById('radiusError');
+
+radiusInput.addEventListener('input', function() {
+    const value = parseFloat(this.value);
+
+    // Kiểm tra nếu người dùng đã nhập số và số đó nhỏ hơn 500
+    if (this.value !== "" && value < 500) {
+        errorDisplay.textContent = "Độ rộng tối thiểu là 500m";
+        errorDisplay.style.display = "block";
+        this.style.borderColor = "red"; // Đổi màu viền để cảnh báo (tùy chọn)
+    } else {
+        errorDisplay.style.display = "none";
+        this.style.borderColor = ""; // Trả lại màu viền cũ
+    }
+});
+
+// Chặn trường hợp người dùng cố tình nhập số âm hoặc quá nhỏ khi rời chuột
+radiusInput.addEventListener('blur', function() {
+    if (this.value !== "" && parseFloat(this.value) < 500) {
+        this.value = 500; // Tự động đưa về 500 nếu người dùng nhập sai
+        errorDisplay.style.display = "none";
+    }
+});

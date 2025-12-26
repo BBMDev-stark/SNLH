@@ -133,9 +133,14 @@
       </div>
       <div class="divider"><span class="divider-text">Hoặc</span>
       </div>
-      <div class="custom-input-group"><label class="custom-input-label" for="customRadius">Tùy chỉnh bán kính</label>
-       <div class="custom-input-wrapper"><input type="number" id="customRadius" class="custom-input" placeholder="Nhập giá trị từ 500 - 10000" min="500" max="10000"> <span class="input-unit">mét</span>
-       </div>
+      <div class="custom-input-group">
+    <label class="custom-input-label" for="customRadius">Tùy chỉnh bán kính</label>
+    <div class="custom-input-wrapper">
+        <input type="number" id="customRadius" class="custom-input" placeholder="Nhập giá trị từ 500 - 10000" min="500" max="10000">
+        <span class="input-unit">mét</span>
+    </div>
+    <div id="radiusError" style="color: red; font-size: 12px; margin-top: 5px; display: none;"></div>
+</div>
       </div><button class="action-button" id="submitBtn"> <span>Xem bản đồ</span> <span>→</span> </button>
      </div>
     </div>
