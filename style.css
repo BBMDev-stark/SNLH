@@ -1326,12 +1326,15 @@ body {
 
     /* Map Screen */
     .map-screen {
-      width: 100%;
-      height: 100%;
-      display: none;
-      flex-direction: column;
-      opacity: 0;
-      transition: opacity 0.6s ease;
+      position: fixed;   /* ⭐ QUAN TRỌNG */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.6s ease;
     }
 
     .map-screen.active {

@@ -318,7 +318,7 @@ customRadiusInput.addEventListener('input', () => {
 // Submit button
 document.getElementById('submitBtn').addEventListener('click', () => {
     if (!selectedRadius || selectedRadius < 100) {
-        showToast('Vui lòng chọn bán kính hợp lệ (100m - 10,000m)');
+        showToast('Vui lòng chọn bán kính hợp lệ (500m - 10,000m)');
         return;
     }
 
